@@ -1,0 +1,31 @@
+﻿@model WebApp.Views.Order.CreateOrderModel
+@{
+}
+<h1>Make Order</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <form method="Post">
+            <div asp-validation-summary="All"></div>
+
+            <div class="mb-3">
+                <label asp-for="NewOrder.ClienteName">ClienteName</label>
+                <input asp-for="NewOrder.ClienteName" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="NewOrder.Price">Price</label>
+                <input asp-for="NewOrder.Price" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="NewOrder.CoffeType">CoffeType</label>
+                <select asp-for="NewOrder.CoffeType" class="form-control">
+                    <option value="Expresso">Expresso</option>
+                    <option value="FlatWhite">FlatWhite</option>
+                    <option value="Capuccino">Capuccino</option>
+                    <option value="Americano">Americano</option>
+                </select>
+            </div>
+            <button class="btn btn-success">Create</button>
+        </form>
+    </div>
+</div>
